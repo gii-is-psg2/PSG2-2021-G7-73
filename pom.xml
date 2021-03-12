@@ -49,6 +49,14 @@
 				<role></role>
 			</roles>
 		</developer>
+        		<developer>
+			<id>antoniojss1</id>
+			<name>Antonio Javier</name>
+			<email>antoniojss1a@gmail.com</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
 		
 	</developers>
 
