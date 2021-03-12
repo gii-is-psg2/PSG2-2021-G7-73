@@ -41,6 +41,14 @@
 				<role>Scrum Master</role>
 			</roles>
 		</developer>
+        		<developer>
+			<id>alvesccas</id>
+			<name>Álvaro</name>
+			<email>alvesccas@alum.us.es</email>
+			<roles>
+				<role></role>
+			</roles>
+		</developer>
 		
 	</developers>
 
