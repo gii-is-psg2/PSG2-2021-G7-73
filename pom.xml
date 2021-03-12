@@ -65,9 +65,7 @@
 				<role>Developer</role>
 			</roles>
 		</developer>
-		
-	</developers>
-<developer>
+        <developer>
 			<id>Blancamauri</id>
 			<name>Blanca</name>
 			<email>blamaurob@alum.us.es</email>
@@ -77,6 +75,8 @@
 		</developer>
 		
 	</developers>
+
+
 
     <dependencies>
         <!-- Spring and Spring Boot dependencies -->
