@@ -49,6 +49,14 @@
 				<role>Developer</role>
 			</roles>
 		</developer>
+        <developer>
+			<id>juaordmar</id>
+			<name>Juan</name>
+			<email>juaordmar@alum.us.es</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
         		<developer>
 			<id>antoniojss1</id>
 			<name>Antonio Javier</name>
