@@ -7,7 +7,7 @@ project:
       url: 'https://github.com/gii-is-psg2/PSG2-2021-G7-73.git'
   members:
     member1:
-      name: 'Beatriz'
+      name: 'Beatriz María'
       surname: 'Llamas Sainz-Pardo' 
       githubUsername: 'beallasai'
     member2:
@@ -19,10 +19,10 @@ project:
       surname: 'Escalante Castro'
       githubUsername: 'alvesccas221'
     member4:
-      name: ''
-      surname: ''
-      githubUsername: ''
+      name: 'Blanca del Rosario'
+      surname: 'Mauri Robles'
+      githubUsername: 'Blancamauri'
     member5:
-      name: ''
-      surname: ''
-      githubUsername: ''
+      name: 'Juan Emilio'
+      surname: 'Ordóñez Márquez'
+      githubUsername: 'juaordmar'
