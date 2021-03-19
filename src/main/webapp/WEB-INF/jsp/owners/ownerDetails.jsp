@@ -63,6 +63,8 @@
                         <tr>
                             <th>Visit Date</th>
                             <th>Description</th>
+                            <th>New Booking</th>
+                            <th>Last Booking</th>
                         </tr>
                         </thead>
                         <c:forEach var="visit" items="${pet.visits}">
@@ -85,6 +87,19 @@
                                     <spring:param name="petId" value="${pet.id}"/>
                                 </spring:url>
                                 <a href="${fn:escapeXml(visitUrl)}">Add Visit</a>
+                            </td>
+                             <td>
+                                <spring:url value="/owners/{ownerId}/pets/{petId}/bookings/new" var="visitUrl">
+                                    <spring:param name="ownerId" value="${owner.id}"/>
+                                    <spring:param name="petId" value="${pet.id}"/>
+                                </spring:url>
+                                <a href="${fn:escapeXml(visitUrl)}">Add Booking</a>
+                            </td>
+                            <td>
+                                <spring:url value="/bookings/{petId}" var="visitUrl">
+                                    <spring:param name="petId" value="${pet.id}"/>
+                                </spring:url>
+                                <a href="${fn:escapeXml(visitUrl)}">My Bookings</a>
                             </td>
                         </tr>
                     </table>
