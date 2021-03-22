@@ -10,8 +10,10 @@
     <table id="vetsTable" class="table table-striped">
         <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Especialidades</th>
+
+            <th>Name</th>
+            <th>Specialties</th>
+
         </tr>
         </thead>
         <tbody>
@@ -26,10 +28,12 @@
                     </c:forEach>
                     <c:if test="${vet.nrOfSpecialties == 0}">none</c:if>
                 </td>
+                
             </tr>
         </c:forEach>
         </tbody>
     </table>
+    
 
     <table class="table-buttons">
         <tr>
@@ -38,4 +42,11 @@
             </td>            
         </tr>
     </table>
+    <sec:authorize access="hasAuthority('admin')">
+		<a class="btn btn-default" href='<spring:url value="/vets/new" htmlEscape="true"/>'>Add Vet</a>
+	</sec:authorize>
 </petclinic:layout>
+
+
+	
+

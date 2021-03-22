@@ -39,5 +39,7 @@ public interface VetRepository extends Repository<Vet, Integer>{
 	 * @return a <code>Collection</code> of <code>Vet</code>s
 	 */
 	Collection<Vet> findAll() throws DataAccessException;
+	Vet findById(Integer id) throws DataAccessException;
+	Vet save(Vet entity);
 
 }
