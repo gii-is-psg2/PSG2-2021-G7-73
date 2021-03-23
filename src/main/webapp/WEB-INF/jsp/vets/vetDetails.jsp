@@ -6,12 +6,12 @@
 
 <petclinic:layout pageName="vets">
 
-    <h2>Vet Information</h2>
+    <h2>Información del Veterinario</h2>
 
 
     <table class="table table-striped">
         <tr>
-            <th>Name</th>
+            <th>Nombre</th>
             <td><b><c:out value="${vet.firstName} ${vet.lastName}"/></b></td>
         </tr>
        
@@ -21,7 +21,7 @@
     <spring:url value="{vetId}/edit" var="editUrl">
         <spring:param name="vetId" value="${vet.id}"/>
     </spring:url>
-    <a href="${fn:escapeXml(editUrl)}" class="btn btn-default">Edit Vet</a>
+    <a href="${fn:escapeXml(editUrl)}" class="btn btn-default">Editar Veterinario</a>
 
     
 
