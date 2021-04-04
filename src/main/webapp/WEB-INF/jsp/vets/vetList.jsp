@@ -11,8 +11,8 @@
         <thead>
         <tr>
 
-            <th>Name</th>
-            <th>Specialties</th>
+            <th>Nombre</th>
+            <th>Especialidades</th>
 
         </tr>
         </thead>

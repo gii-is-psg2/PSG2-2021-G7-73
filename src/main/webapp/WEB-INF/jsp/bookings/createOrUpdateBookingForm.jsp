@@ -21,7 +21,7 @@
     </jsp:attribute>
         <jsp:body>
     <h2>
-        <c:if test="${booking['new']}">New </c:if> Booking
+        <c:if test="${booking['new']}">Nueva </c:if> Reserva
 	</h2>
     <form:form modelAttribute="booking" class="form-horizontal" id="add-booking-form">
     
@@ -34,10 +34,10 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <c:choose>
                     <c:when test="${owner['new']}">
-                        <button class="btn btn-default" type="submit">Add Booking</button>
+                        <button class="btn btn-default" type="submit">Añadir Reserva</button>
                     </c:when>
                     <c:otherwise>
-                        <button class="btn btn-default" type="submit">Update Booking</button>
+                        <button class="btn btn-default" type="submit">Actualizar Reserva</button>
                     </c:otherwise>
                 </c:choose>
             </div>
