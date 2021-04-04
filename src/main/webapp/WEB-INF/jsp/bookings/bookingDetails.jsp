@@ -7,7 +7,7 @@
 
 
 <petclinic:layout pageName="bookings">
-	<h2>Booking Information</h2>
+	<h2>Información de la Reserva</h2>
 
 
 
@@ -23,7 +23,7 @@
 				<td><c:out value="${booking.fechaSalida}" /></td>
 			</tr>
 			<tr>
-				<th>Informacion</th>
+				<th>Información</th>
 				<td><c:out value="${booking.info}" /></td>
 			</tr>
 			<%-- <tr>
