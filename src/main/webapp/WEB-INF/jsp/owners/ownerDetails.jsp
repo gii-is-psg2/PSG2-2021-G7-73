@@ -38,6 +38,11 @@
     </spring:url>
     <a href="${fn:escapeXml(addUrl)}" class="btn btn-default">Aï¿½adir Nueva Mascota</a>
 
+	<spring:url value="{ownerId}/delete" var="deleteUrl">
+    <spring:param name="ownerId" value="${owner.id}"/>
+    </spring:url>
+    <a href="${fn:escapeXml(deleteUrl)}" class="btn btn-default">Eliminar dueño</a>
+
     <br/>
     <br/>
     <br/>
