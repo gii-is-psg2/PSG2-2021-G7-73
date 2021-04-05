@@ -75,5 +75,10 @@ public class OwnerService {
 		//creating authorities
 		authoritiesService.saveAuthorities(owner.getUser().getUsername(), "owner");
 	}		
+	
+	@Transactional
+	public void deleteOwner(int ownerId) {
+		ownerRepository.delete(ownerId);
+	}
 
 }
