@@ -33,9 +33,9 @@ In the retrospective meeting, the team has a discussion about those results.
 ## Sprint Template
 
 | Day           |    Álvaro     | Antonio  | Beatriz     | Blanca     | Juan     | 
-| ------------- | ------------- | -------------  | -------------  | -------------  |
-| Day 1         | :smile:        |                |                |                |                
-| Day 2         |               |    :smile:            |                |                |               
-| Day 3         |               |    :worried:            |                |                |               
-| Day 4         |  :neutral_face:             |               |                |                |               
+| ------------- | ------------- | -------------  | -------------  | -------------  | -------------  | -------------  |
+| Day 1         | :smile:        |                |                |                |                |                |
+| Day 2         |               |    :smile:            |                |                |                |                |
+| Day 3         |               |    :worried:            |                |                |                |                |
+| Day 4         |  :neutral_face:             |               |                |                |                |                |
 ...
