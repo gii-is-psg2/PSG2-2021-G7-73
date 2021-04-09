@@ -32,7 +32,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 ## Sprint Template
 
-| Day           |    Álvaro     | Antonio  | Beatriz     | Blanca     | Juan     | 
+| Day           | JAPAREJO    | Juanito  | [Member C]     | [Member D]     | [Member E]     | [Member F]     |
 | ------------- | ------------- | -------------  | -------------  | -------------  | -------------  | -------------  |
 | Day 1         | :smile:        |                |                |                |                |                |
 | Day 2         |               |    :smile:            |                |                |                |                |
