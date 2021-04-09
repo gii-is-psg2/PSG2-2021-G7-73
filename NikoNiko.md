@@ -32,7 +32,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 ## Sprint Template
 
-| Day           |Álvaro    | Antonio  | Beatriz     | Blanca     | Juan     | [Member F]     |
+| Day           |Álvaro    | Antonio  | Beatriz     | Blanca     | Juan     | 
 | ------------- | ------------- | -------------  | -------------  | -------------  | -------------  | -------------  |
 | 9 abril         | :smile:        |       :smiley:         |   :smile:             | 😃              | :smile:                |                |
 | 10 abril        |               |                |                |                |                |                |
@@ -40,4 +40,23 @@ In the retrospective meeting, the team has a discussion about those results.
 | 12 abril         |             |               |                |                |                |                |
 | 13 abril         |             |               |                |                |                |                |
 | 14 abril         |             |               |                |                |                |                |
+| 15 abril         |             |               |                |                |                |                |
+| 16 abril         |             |               |                |                |                |                |
+| 17 abril         |             |               |                |                |                |                |
+| 18 abril         |             |               |                |                |                |                |
+| 19 abril         |             |               |                |                |                |                |
+| 20 abril         |             |               |                |                |                |                |
+| 21 abril         |             |               |                |                |                |                |
+| 22 abril         |             |               |                |                |                |                |
+| 23 abril         |             |               |                |                |                |                |
+| 24 abril         |             |               |                |                |                |                |
+| 25 abril         |             |               |                |                |                |                |
+| 26 abril         |             |               |                |                |                |                |
+| 27 abril         |             |               |                |                |                |                |
+| 28 abril         |             |               |                |                |                |                |
+| 29 abril         |             |               |                |                |                |                |
+| 30 abril         |             |               |                |                |                |                |
+| 1 mayo         |             |               |                |                |                |                |
+| 2 mayo         |             |               |                |                |                |                |
+| 3 mayo         |             |               |                |                |                |                |
 
