@@ -34,7 +34,7 @@ In the retrospective meeting, the team has a discussion about those results.
 
 | Day           |Álvaro    | Antonio  | Beatriz     | Blanca     | Juan     | [Member F]     |
 | ------------- | ------------- | -------------  | -------------  | -------------  | -------------  | -------------  |
-| Day 1         | :smile:        |       :smiley:         |                |               | :smile:                |                |
+| Day 1         | :smile:        |       :smiley:         |                | 😃              | :smile:                |                |
 | Day 2         |               |                |                |                |                |                |
 | Day 3         |               |                |                |                |                |                |
 | Day 4         |  :neutral_face:             |               |                |                |                |                |
