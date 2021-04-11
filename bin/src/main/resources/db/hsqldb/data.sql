@@ -62,11 +62,3 @@ INSERT INTO visits(id,pet_id,visit_date,description) VALUES (2, 8, '2013-01-02',
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (3, 8, '2013-01-03', 'neutered');
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (4, 7, '2013-01-04', 'spayed');
 
-INSERT INTO causas(nombre,descripcion,organizacion,objetivo, owner_id) VALUES ('Parque', 'Parque exclusivo para pasear gatos', 'CatsLovers', 125.5, 1);
-INSERT INTO causas(nombre,descripcion,organizacion,objetivo, owner_id) VALUES ('Café', 'Lugar para pasar un buen rato en compañía de animales', 'AnimalFood', 1500, 2);
-INSERT INTO causas(nombre,descripcion,organizacion,objetivo, owner_id) VALUES ('Agua', 'Poner distintas tomas de agua en la ciudad para nuestras mascotas', 'Pets&Co', 350, 3);
-
-
-
-
-
