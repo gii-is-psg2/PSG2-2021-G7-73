@@ -1,13 +1,9 @@
 package org.springframework.samples.petclinic.model;
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
 
 
 @Entity
@@ -15,28 +11,20 @@ import javax.validation.constraints.NotEmpty;
 public class Causa extends BaseEntity{
 	
 	@Column(name = "nombre")
-	@NotEmpty
 	private String nombre;
 	
 	
 	@Column(name = "descripcion")
-	@NotEmpty
 	private String descripcion;
 	
 	
 	@Column(name = "organizacion")
-	@NotEmpty
 	private String organizacion;
 	
 	
 	@Column(name = "objetivo")
-	@NotEmpty
 	private Double objetivo;
 	
-	
-	@ManyToOne
-	@JoinColumn(name = "owner_id")
-	private Owner owner;
 
 
 	public String getNombre() {
@@ -53,6 +41,23 @@ public class Causa extends BaseEntity{
 	
 	public Double getObjetivo() {
 		return objetivo;
+	}
+	
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	public void setOrganizacion(String organizacion) {
+		this.organizacion = organizacion;
+	}
+	
+	public void setObejtivo(Double objetivo) {
+		this.objetivo = objetivo;
 	}
 
 

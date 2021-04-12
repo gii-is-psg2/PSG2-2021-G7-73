@@ -13,18 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CausaService {
 	
-	@Autowired
-	CausaRepository causaRepo;
+	private CausaRepository causaRepo;
 	
-//	@Autowired
-//	public CausaService(CausaRepository causaRepo) {
-//		this.causaRepo = causaRepo;
-//	}
-//	
-//	@Transactional
-//	public void saveBooking(Causa causa) throws DataAccessException {
-//		this.causaRepo.save(causa);
-//	}
+	
+	@Autowired
+	public CausaService(CausaRepository causaRepo) {
+		this.causaRepo = causaRepo;
+	}
 
 
 	

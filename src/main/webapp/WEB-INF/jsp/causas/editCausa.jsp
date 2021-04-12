@@ -8,23 +8,26 @@
 
 <petclinic:layout pageName="causas">
 <jsp:body>
-    <h2>
-        Nueva Causa
+     <h2>
+        <c:if test="${causa['new']}">Nueva </c:if> Causa
     </h2>
     <form:form modelAttribute="causa" class="form-horizontal" id="add-causa-form" action="/causas/save">
         <div class="form-group has-feedback">
             <petclinic:inputField label="Nombre" name="nombre"/>
             <petclinic:inputField label="Descripción" name="descripcion"/>
             <petclinic:inputField label="Organización" name="organizacion"/>
-            <petclinic:inputField label="Objetivo" name="descripcion"/>            
+            <petclinic:inputField label="Objetivo" name="objetivo"/>            
             
         </div>
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-            
-           		<input type="hidden" name="id" value="${causa.id}"/>
-               	<button class="btn btn-default" type="submit">Guardar</button>
+            	<c:choose>
+            		<c:when test="${causa['new']}">
+                        <button class="btn btn-default" type="submit">Añadir Causa</button>
+                    </c:when>
+           			
+               	 </c:choose>
             </div>
         </div>
     </form:form>
