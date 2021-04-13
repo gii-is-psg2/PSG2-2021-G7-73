@@ -32,7 +32,7 @@
                     <c:out value="${causa.organizacion}"/>
                 </td>
                 <td>
-                    <c:out value="${causa.objetivo}"/>
+                    <c:out value="${causa.num}"/>
                 </td> 
             </tr>
 		</c:forEach>

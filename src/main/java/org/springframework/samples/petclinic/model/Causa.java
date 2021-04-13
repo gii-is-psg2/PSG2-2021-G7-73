@@ -4,6 +4,7 @@ package org.springframework.samples.petclinic.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMin;
 
 
 @Entity
@@ -23,8 +24,23 @@ public class Causa extends BaseEntity{
 	
 	
 	@Column(name = "objetivo")
+	@DecimalMin("0.0") 
 	private Double objetivo;
 	
+	
+	
+	@Column(name = "num")
+	@DecimalMin("0.0")
+	private Double num;
+	
+	public Double getNum() {
+		return num;
+	}
+	
+	
+	public void setNum(Double num) {
+		this.num = num;
+	}
 
 
 	public String getNombre() {

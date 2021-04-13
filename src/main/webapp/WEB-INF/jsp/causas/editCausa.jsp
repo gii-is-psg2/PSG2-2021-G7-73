@@ -16,7 +16,7 @@
             <petclinic:inputField label="Nombre" name="nombre"/>
             <petclinic:inputField label="Descripción" name="descripcion"/>
             <petclinic:inputField label="Organización" name="organizacion"/>
-            <petclinic:inputField label="Objetivo" name="objetivo"/>            
+            <petclinic:inputField label="Objetivo" name="num"/>            
             
         </div>
         
