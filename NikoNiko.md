@@ -31,12 +31,12 @@ In the retrospective meeting, the team has a discussion about those results.
 
 ## Sprint Template
 
-| Day           |   Álvaro    | Antonio      | Beatriz         | Blanca        | Juan            | 
-| ------------- | ----------- | ------------- | -------------  | ------------- | -------------   | 
+| Day           |   Álvaro    | Antonio       | Beatriz        | Blanca         | Juan            | 
+| ------------- | ----------- | ------------- | -------------  | -------------  | -------------   | 
 | 9 abril       | :smile:     |    :smiley:   |   :smile:      | 😃             | :smile:        |                
 | 10 abril      |             |               |      -         |                |                |                
 | 11 abril      |             |               |  :smile:       |                |                |                
-| 12 abril      |             |               |                |                |                |                
+| 12 abril      |             |               |  :smile:       |                |                |                
 | 13 abril      |             |               |                |                |                |                
 | 14 abril      |             |               |                |                |                |               
 | 15 abril      |             |               |                |                |                |                
