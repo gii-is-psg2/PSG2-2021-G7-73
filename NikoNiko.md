@@ -20,13 +20,13 @@ In the retrospective meeting, the team has a discussion about those results.
 
 ### Sprint 3: L3-Measurement 
 
-| Day           | J. A. Parejo  |
-| ------------- | ------------- |
-| Day 1         |    :smiley: / :smile: (Meaning that I am learning, I like the work and I think I can do it without problems, but with some effort) |
-| Day 2         |    - (Meaning that I did no work regarding the PSG2 project)           |
-| Day 3         |    :neutral_face:  (Meaning that I feel I had to struggle, but the assigned work was fair and the day productive)          |:fearful:
-| Day 4         |    :worried: (Meaning that I feel I have serious difficulties to accomplish the task, or the productivity of my day was awful)           |
-| Day 5         |    :fearful:   (I´m desperate, I need help)        |
+| Estado           | Significado   |
+| -------------    | ------------- |
+|:smiley: / :smile:|(Meaning that I am learning, I like the work and I think I can do it without problems, but with some effort) |
+|     -            |(Meaning that I did no work regarding the PSG2 project)           |
+|  :neutral_face:  |(Meaning that I feel I had to struggle, but the assigned work was fair and the day productive)          |:fearful:
+|    :worried:     |(Meaning that I feel I have serious difficulties to accomplish the task, or the productivity of my day was awful)           |
+|     :fearful:    |(I´m desperate, I need help)        |
 
 
 ## Sprint Template
@@ -34,10 +34,10 @@ In the retrospective meeting, the team has a discussion about those results.
 | Day           |   Álvaro    | Antonio       | Beatriz        | Blanca         | Juan            | 
 | ------------- | ----------- | ------------- | -------------  | -------------  | -------------   | 
 | 9 abril       | :smile:     |    :smiley:   |   :smile:      | 😃             | :smile:        |                
-| 10 abril      |      -       |               |      -         |                |                |                
-| 11 abril      |      -       |               |  :smile:       |                |                |                
-| 12 abril      |      -       |               |  :smile:       |                |                |                
-| 13 abril      |      -       |               |                |                |                |                
+| 10 abril      |      -      |               |      -         |                |                |                
+| 11 abril      |      -      |               |  :smile:       |                |                |                
+| 12 abril      |      -      |               |  :smile:       |                |                |                
+| 13 abril      |      -      |               |  :smile:       |                |                |                
 | 14 abril      |             |               |                |                |                |               
 | 15 abril      |             |               |                |                |                |                
 | 16 abril      |             |               |                |                |                |                
