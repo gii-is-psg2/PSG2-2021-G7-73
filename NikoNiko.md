@@ -24,7 +24,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | -------------    | ------------- |
 |:smiley: / :smile:|(Meaning that I am learning, I like the work and I think I can do it without problems, but with some effort) |
 |     -            |(Meaning that I did no work regarding the PSG2 project)           |
-|  :neutral_face:  |(Meaning that I feel I had to struggle, but the assigned work was fair and the day productive)          |:fearful:
+|  :neutral_face:  |(Meaning that I feel I had to struggle, but the assigned work was fair and the day productive)          |
 |    :worried:     |(Meaning that I feel I have serious difficulties to accomplish the task, or the productivity of my day was awful)           |
 |     :fearful:    |(I´m desperate, I need help)        |
 
