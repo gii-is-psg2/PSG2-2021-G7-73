@@ -37,8 +37,8 @@ In the retrospective meeting, the team has a discussion about those results.
 | 10 abril      |      -      |               |      -         |                |                |                
 | 11 abril      |      -      |               |  :smile:       |                |                |                
 | 12 abril      |      -      |               |  :smile:       |                |                |                
-| 13 abril      |      -      |               |  :smile:       |                |                |                
-| 14 abril      |             |               |                |                |                |               
+| 13 abril      |      -      |               |  :smile:       | :smile:        |                |                
+| 14 abril      |             |               |                |   :smile:      |                |               
 | 15 abril      |             |               |                |                |                |                
 | 16 abril      |             |               |                |                |                |                
 | 17 abril      |             |               |                |                |                |                
