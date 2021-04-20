@@ -1,10 +1,24 @@
 package org.springframework.samples.petclinic.model;
 
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.DecimalMin;
+
+import org.springframework.beans.support.MutableSortDefinition;
+import org.springframework.beans.support.PropertyComparator;
 
 
 @Entity
@@ -23,16 +37,28 @@ public class Causa extends BaseEntity{
 	private String organizacion;
 	
 	
-	@Column(name = "objetivo")
-	@DecimalMin("0.0") 
-	private Double objetivo;
 	
+	@Column(name = "totalBudget")
+	private Integer totalBudget;
 	
 	
 	@Column(name = "num")
 	@DecimalMin("0.0")
 	private Double num;
 	
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="causa", fetch = FetchType.EAGER)
+	private Collection<Donation> donations;
+	
+	public Collection<Donation> getDonations() {
+		return donations;
+	}
+
+
+	public void listDonations(Collection<Donation> donations) {
+		this.donations = donations;
+	}
+
+
 	public Double getNum() {
 		return num;
 	}
@@ -55,9 +81,7 @@ public class Causa extends BaseEntity{
 		return organizacion;
 	}
 	
-	public Double getObjetivo() {
-		return objetivo;
-	}
+
 	
 	
 	public void setNombre(String nombre) {
@@ -71,9 +95,18 @@ public class Causa extends BaseEntity{
 	public void setOrganizacion(String organizacion) {
 		this.organizacion = organizacion;
 	}
-	
-	public void setObejtivo(Double objetivo) {
-		this.objetivo = objetivo;
+
+
+	public List<Donation> findDonations() {
+		return donations.stream().collect(Collectors.toList());
+		
+	}
+
+
+	public void addDonation(Donation donation) {
+		 donations.add(donation);
+		    donation.setCausa(this);
+		
 	}
 
 
