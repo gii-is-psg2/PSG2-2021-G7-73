@@ -14,33 +14,15 @@ public class Causa extends BaseEntity{
 	@Column(name = "nombre")
 	private String nombre;
 	
-	
 	@Column(name = "descripcion")
 	private String descripcion;
-	
 	
 	@Column(name = "organizacion")
 	private String organizacion;
 	
-	
-	@Column(name = "objetivo")
-	@DecimalMin("0.0") 
-	private Double objetivo;
-	
-	
-	
 	@Column(name = "num")
 	@DecimalMin("0.0")
 	private Double num;
-	
-	public Double getNum() {
-		return num;
-	}
-	
-	
-	public void setNum(Double num) {
-		this.num = num;
-	}
 
 
 	public String getNombre() {
@@ -55,8 +37,8 @@ public class Causa extends BaseEntity{
 		return organizacion;
 	}
 	
-	public Double getObjetivo() {
-		return objetivo;
+	public Double getNum() {
+		return num;
 	}
 	
 	
@@ -72,8 +54,8 @@ public class Causa extends BaseEntity{
 		this.organizacion = organizacion;
 	}
 	
-	public void setObejtivo(Double objetivo) {
-		this.objetivo = objetivo;
+	public void setNum(Double num) {
+		this.num = num;
 	}
 
 
