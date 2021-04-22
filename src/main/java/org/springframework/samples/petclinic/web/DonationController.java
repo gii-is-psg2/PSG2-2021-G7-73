@@ -20,40 +20,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/donations")
 public class DonationController {
-//
-//	@Autowired
-//	DonationServiceImpl donationService;
-//
-//	@Autowired
-//	CausaServiceImpl causaService;
-//
-//
-//	@GetMapping(value = "/donations/new")
-//	public String initCreationForm(Causa causa, ModelMap model) {
-//		Donation donation = new Donation();
-//		causa.addDonation(donation);
-//		donation.setDate(LocalDate.now());
-//		model.put("donation", donation);
-//		return "donations/createOrUpdateDonationForm";
-//	}
-//
-//	@PostMapping(value = "/donations/new")
-//	public String processCreationForm(@ModelAttribute Causa causa, @Valid Donation donation, BindingResult result, ModelMap model) {
-//		donation.setCausa(causa);
-//		if (causaService.totalBudget(causa.getId())==causa.getObjetivo()){
-//			result.rejectValue("client", "closed");
-//			result.rejectValue("amount", "closed");
-//		} 
-//		if (result.hasErrors()) {
-//			model.put("donation", donation);
-//			return "donations/createOrUpdateDonationForm";
-//		} else {
-//			this.donationService.saveDonation(donation);
-//			causa.addDonation(donation);
-//
-//
-//			return "redirect:/causas";
-//		}  
-//
-//	}
+
+	@Autowired
+	DonationService donationService;
+
+	@Autowired
+	CausaService causaService;
+
+	@Autowired
+	public DonationController(DonationService donationService) {
+		this.donationService = donationService;
+	}
+	
+
+	@GetMapping(value = "/donations/new")
+	public String initCreationForm(Causa causa, ModelMap model) {
+		Donation donation = new Donation();
+		causa.addDonation(donation);
+		donation.setDate(LocalDate.now());
+		model.put("donation", donation);
+		return "donaciones/createOrUpdateDonationForm";
+	}
+
+	@PostMapping(value = "/donations/new")
+	public String processCreationForm(@ModelAttribute Causa causa, @Valid Donation donation, BindingResult result, ModelMap model) {
+		donation.setCausa(causa);
+		if (causaService.totalBudget(causa)==causa.getNum()){
+			result.rejectValue("client", "closed");
+			result.rejectValue("amount", "closed");
+		} 
+		if (result.hasErrors()) {
+			model.put("donation", donation);
+			return "donaciones/createOrUpdateDonationForm";
+		} else {
+			this.donationService.saveDonation(donation);
+			causa.addDonation(donation);
+
+
+			return "redirect:/causas";
+		}  
+
+	}
 }
