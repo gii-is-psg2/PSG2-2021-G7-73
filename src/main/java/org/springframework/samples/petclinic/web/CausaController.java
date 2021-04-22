@@ -12,8 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -52,6 +54,14 @@ public class CausaController {
 		String vista = "causas/editCausa";
 		modelmap.addAttribute("causa", new Causa());
 		return vista;
+	}
+	
+	
+	@GetMapping("/{causaId}")
+	public ModelAndView showCausa(@PathVariable("causaId") int causaId) {
+		ModelAndView mav = new ModelAndView("causas/causaDetails");
+		mav.addObject(this.causaService.findCausaById(causaId));
+		return mav;
 	}
 
 }

@@ -28,14 +28,13 @@ public class Causa extends BaseEntity{
 	@Column(name = "nombre")
 	private String nombre;
 	
-	
 	@Column(name = "descripcion")
 	private String descripcion;
-	
 	
 	@Column(name = "organizacion")
 	private String organizacion;
 	
+
 	
 	
 	@Column(name = "totalBudget")
@@ -69,6 +68,7 @@ public class Causa extends BaseEntity{
 	}
 
 
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -80,8 +80,6 @@ public class Causa extends BaseEntity{
 	public String getOrganizacion() {
 		return organizacion;
 	}
-	
-
 	
 	
 	public void setNombre(String nombre) {
@@ -97,6 +95,7 @@ public class Causa extends BaseEntity{
 	}
 
 
+
 	public List<Donation> findDonations() {
 		return donations.stream().collect(Collectors.toList());
 		
@@ -107,6 +106,7 @@ public class Causa extends BaseEntity{
 		 donations.add(donation);
 		    donation.setCausa(this);
 		
+
 	}
 
 

@@ -7,6 +7,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.model.Causa;
 import org.springframework.samples.petclinic.model.Donation;
 import org.springframework.samples.petclinic.repository.CausaRepository;
@@ -26,11 +27,16 @@ public class CausaService {
 		this.causaRepo = causaRepo;
 	}
 
-
 	
 	@Transactional(readOnly=true)
 	public Collection<Causa> findAll() {
 		return causaRepo.findAll();
+	}
+	
+	
+	@Transactional(readOnly = true)
+	public Causa findCausaById(int id) throws DataAccessException {
+		return causaRepo.findById(id);
 	}
 	
 	
