@@ -40,7 +40,7 @@ In the retrospective meeting, the team has a discussion about those results.
 | 13 abril      |      -      |               | :neutral_face: | :smile:        |                |                
 | 14 abril      |  :smile:    |               |    -           |   :smile:      |                |               
 | 15 abril      |      -      |               |    -           |                |                |                
-| 16 abril      |      -      |               |  :smile:       |                |                |                
+| 16 abril      |  :smiley:   |               |  :smile:       |                |                |                
 | 17 abril      |      -      |               |    -           |                |                |                
 | 18 abril      |      -      |               |  :smile:       |                |                |                
 | 19 abril      |      -      |               |       -        |                |                |                
