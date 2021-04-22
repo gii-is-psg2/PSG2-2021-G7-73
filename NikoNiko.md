@@ -40,13 +40,13 @@ In the retrospective meeting, the team has a discussion about those results.
 | 13 abril      |      -      |               | :neutral_face: | :smile:        |                |                
 | 14 abril      |  :smile:    |               |    -           |   :smile:      |                |               
 | 15 abril      |      -      |               |    -           |                |                |                
-| 16 abril      |  :smiley:   |               |  :smile:       |                |                |                
-| 17 abril      |      -      |               |    -           |                |                |                
-| 18 abril      |      -      |               |  :smile:       |                |                |                
-| 19 abril      |      -      |               |       -        |                |                |                
-| 20 abril      |      -      |               |       -        |                |                |                
-| 21 abril      |  :smile:    |               |  :smile:       |                |                |                
-| 22 abril      |             |               |                |                |                |                
+| 16 abril      |  :smiley:   |     :smile:   |  :smile:       |                |                |                
+| 17 abril      |      -      |    :smile:    |    -           |                |                |                
+| 18 abril      |      -      |      -        |  :smile:       |                |                |                
+| 19 abril      |      -      |   :smile:     |       -        |                |                |                
+| 20 abril      |      -      |      -        |       -        |                |                |                
+| 21 abril      |  :smile:    | :neutral_face:|  :smile:       |                |                |                
+| 22 abril      |             |   :worried:   |                |                |                |                
 | 23 abril      |             |               |                |                |                |                
 | 24 abril      |             |               |                |                |                |                
 | 25 abril      |             |               |                |                |                |                
