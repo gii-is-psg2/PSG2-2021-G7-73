@@ -1,20 +1,28 @@
 package org.springframework.samples.petclinic.model;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
 @Table(name = "adoptions")
 public class Adoption extends NamedEntity{
 	
-	@NotEmpty
+	
+	@ManyToOne
+	@JoinColumn(name = "pet_id")
+	@NotNull
 	private Pet pet;
 	
-	@NotEmpty
+	@ManyToOne
+	@NotNull
 	private Owner previousOwner;
 	
-	
+
+	@ManyToOne
 	private Owner actualOwner;
 
 	
