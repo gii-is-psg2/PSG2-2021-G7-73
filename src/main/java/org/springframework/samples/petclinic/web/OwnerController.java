@@ -54,6 +54,11 @@ public class OwnerController {
 	@InitBinder
 	public void setAllowedFields(WebDataBinder dataBinder) {
 		dataBinder.setDisallowedFields("id");
+	}	
+	
+	@GetMapping("/owners/{ownerId}/delete")
+	public void deleteOwner(@PathVariable("ownerId") int ownerId) {
+		ownerService.deleteOwner(ownerId);
 	}
 
 	@GetMapping(value = "/owners/new")
