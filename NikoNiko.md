@@ -34,20 +34,20 @@ In the retrospective meeting, the team has a discussion about those results.
 | Day           |   Álvaro    | Antonio       | Beatriz        | Blanca         | Juan            | 
 | ------------- | ----------- | ------------- | -------------  | -------------  | -------------   | 
 | 9 abril       | :smile:     |    :smiley:   |   :smile:      | 😃             | :smile:        |                
-| 10 abril      |      -      |               |      -         |                |                |                
-| 11 abril      |      -      |               |  :smile:       |                |                |                
-| 12 abril      |      -      |               |  :smile:       |                |                |                
-| 13 abril      |      -      |               | :neutral_face: | :smile:        |                |                
-| 14 abril      |  :smile:    |               |    -           |   :smile:      |                |               
-| 15 abril      |      -      |               |    -           |                |                |                
-| 16 abril      |  :smiley:   |     :smile:   |  :smile:       |                |                |                
-| 17 abril      |      -      |    :smile:    |    -           |                |                |                
-| 18 abril      |      -      |      -        |  :smile:       |                |                |                
-| 19 abril      |      -      |   :smile:     |       -        |                |                |                
-| 20 abril      |      -      |      -        |       -        |                |                |                
-| 21 abril      |  :smile:    | :neutral_face:|  :smile:       |                |                |                
-| 22 abril      |             |   :worried:   |                |                |                |                
-| 23 abril      |             |               |                |                |                |                
+| 10 abril      |      -      |               |      -         |                |  -             |                
+| 11 abril      |      -      |               |  :smile:       |                |  -             |                
+| 12 abril      |      -      |               |  :smile:       |                |  :smile:       |                
+| 13 abril      |      -      |               | :neutral_face: | :smile:        |  -             |                
+| 14 abril      |  :smile:    |               |    -           |   :smile:      |  -             |               
+| 15 abril      |      -      |               |    -           |                |  -             |                
+| 16 abril      |  :smiley:   |     :smile:   |  :smile:       |                |  :smile:       |                
+| 17 abril      |      -      |    :smile:    |    -           |                |  -             |                
+| 18 abril      |      -      |      -        |  :smile:       |                |  :anguished:   |                
+| 19 abril      |      -      |   :smile:     |       -        |                |  -             |                
+| 20 abril      |      -      |      -        |       -        |                |  -             |                
+| 21 abril      |  :smile:    | :neutral_face:|  :smile:       |                |  -             |                
+| 22 abril      |             |   :worried:   |                |                |  :worried:     |                
+| 23 abril      |             |               |                |                |  :smile:       |                
 | 24 abril      |             |               |                |                |                |                
 | 25 abril      |             |               |                |                |                |                
 | 26 abril      |             |               |                |                |                |                
