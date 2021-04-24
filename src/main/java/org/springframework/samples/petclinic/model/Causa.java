@@ -103,7 +103,7 @@ public class Causa extends BaseEntity{
 
 
 	public void addDonation(Donation donation) {
-		 donations.add(donation);
+		 getDonations().add(donation);
 		    donation.setCausa(this);
 		
 

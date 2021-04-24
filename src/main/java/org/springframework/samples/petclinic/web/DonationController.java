@@ -14,6 +14,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -39,19 +40,19 @@ public class DonationController {
 		causa.addDonation(donation);
 		donation.setDate(LocalDate.now());
 		model.put("donation", donation);
-		return "donaciones/createOrUpdateDonationForm";
+		return "donations/createOrUpdateDonationForm";
 	}
 
 	@PostMapping(value = "/donations/new")
-	public String processCreationForm(@ModelAttribute Causa causa, @Valid Donation donation, BindingResult result, ModelMap model) {
-		donation.setCausa(causa);
+	public String processCreationForm(@PathVariable("causaId") final int causaId, @Valid Donation donation, BindingResult result, ModelMap model) {
+		Causa causa = causaService.findCausaById(causaId);
 		if (causaService.totalBudget(causa)==causa.getNum()){
 			result.rejectValue("client", "closed");
 			result.rejectValue("amount", "closed");
 		} 
 		if (result.hasErrors()) {
 			model.put("donation", donation);
-			return "donaciones/createOrUpdateDonationForm";
+			return "donations/createOrUpdateDonationForm";
 		} else {
 			this.donationService.saveDonation(donation);
 			causa.addDonation(donation);
