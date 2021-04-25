@@ -48,8 +48,8 @@ In the retrospective meeting, the team has a discussion about those results.
 | 21 abril      |      -      | :neutral_face:|  :smile:       |                |  -             |                
 | 22 abril      | :neutral_face: |   :worried:   |                |                |  :worried:     |                
 | 23 abril      |    :smile:  |               |                |                |  :smile:       |                
-| 24 abril      |             |               |                |                |                |                
-| 25 abril      |             |               |                |                |                |                
+| 24 abril      |       -     |               |                |                |                |                
+| 25 abril      |       -     |               |                |                |                |                
 | 26 abril      |             |               |                |                |                |                
 | 27 abril      |             |               |                |                |                |                
 | 28 abril      |             |               |                |                |                |                
