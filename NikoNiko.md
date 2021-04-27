@@ -50,8 +50,8 @@ In the retrospective meeting, the team has a discussion about those results.
 | 23 abril      |    :smile:    |               |  :smile:       |                |  :smile:       |                
 | 24 abril      |       -       |               |      -         |                |                |                
 | 25 abril      |       -       |               |      -         |                |                |                
-| 26 abril      |               |               |  :smile:       |                |                |                
-| 27 abril      |               |               |                |                |                |                
+| 26 abril      |               |               |      -         |                |                |                
+| 27 abril      |               |               | :neutral_face: |                |                |                
 | 28 abril      |               |               |                |                |                |                
 | 29 abril      |               |               |                |                |                |                
 | 30 abril      |               |               |                |                |                |                
