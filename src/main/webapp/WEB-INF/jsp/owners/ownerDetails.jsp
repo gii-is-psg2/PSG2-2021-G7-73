@@ -71,6 +71,7 @@
                             <th>Descripción</th>
                             <th>Nueva Reserva</th>
                             <th>Última Reserva</th>
+                            <th>Dar en Adopción</th>
 
                         </tr>
                         </thead>
@@ -107,6 +108,12 @@
                                     <spring:param name="petId" value="${pet.id}"/>
                                 </spring:url>
                                 <a href="${fn:escapeXml(visitUrl)}">Mis Reservas</a>
+                            </td>
+                            <td>
+                                <spring:url value="/adoptions/{petId}/newAdoption" var="visitUrl">
+                                	 <spring:param name="petId" value="${pet.id}"/>
+                                </spring:url>
+                                <a href="${fn:escapeXml(visitUrl)}">Dar en adopcion</a>
                             </td>
                         </tr>
                     </table>
