@@ -18,63 +18,64 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CausaService {
 	
-	private CausaRepository causaRepo;
-	private DonationRepository donationRepo;
+	private final CausaRepository causaRepo;
+	private final DonationRepository donationRepo;
 	
 	
 	@Autowired
-	public void CausaServiceImpl(CausaRepository causaRepo) {
+	public CausaService(final CausaRepository causaRepo,final DonationRepository donationRepo) {
 		this.causaRepo = causaRepo;
+		this.donationRepo = donationRepo;
 	}
 
 	
 	@Transactional(readOnly=true)
 	public Collection<Causa> findAll() {
-		return causaRepo.findAll();
+		return this.causaRepo.findAll();
 	}
 	
 	
 	@Transactional(readOnly = true)
-	public Causa findCausaById(int id) throws DataAccessException {
-		return causaRepo.findById(id);
+	public Causa findCausaById(final int id) throws DataAccessException {
+		return this.causaRepo.findById(id);
 	}
 	
 	
 	@Transactional
-	public void save(@Valid Causa Causa) {
-		causaRepo.save(Causa);
+	public void save(@Valid final Causa causa) {
+		this.causaRepo.save(causa);
 
 	}
 	
 	@Transactional(readOnly=true)
-	public Causa findById(int causeId) {
-		return causaRepo.findById(causeId);
+	public Causa findById(final int causeId) {
+		return this.causaRepo.findById(causeId);
 	}
 	
 	
 	@Transactional
-	public Double totalBudget(Causa causa)  {
-		Collection<Donation> donaciones = donationRepo.findByCausa(causa);
+	public Double totalBudget(final Integer causaId)  {
+		final Collection<Donation> donaciones = this.donationRepo.findByCausa(causaId);
 		double finl=0;
-		for(Donation e:donaciones) {
+		for(final Donation e:donaciones) {
 			finl+=e.getAmount();
 		}
 		return finl;
 	}
 
 	@Transactional(readOnly=true)
-	public Collection<Donation> findDonations(Causa causa)  {
-		return donationRepo.findByCausa(causa);
+	public Collection<Donation> findDonations(final Causa causa)  {
+		return this.donationRepo.findByCausa(causa.getId());
 	}
 	
 	
 	
 	@Transactional
-	public List<Double> findDonationsByCauses(List<Causa> causes) {
-		List<Double> res=new ArrayList<>();
-		for(Causa c:causes) {
+	public List<Double> findDonationsByCauses(final List<Causa> causes) {
+		final List<Double> res=new ArrayList<>();
+		for(final Causa c:causes) {
 			Double res1=0.;
-				for(Donation d:this.findDonationsByCausa(c)) {
+				for(final Donation d:this.findDonationsByCausa(c)) {
 					res1+=d.getAmount();
 			
 					}
@@ -82,8 +83,8 @@ public class CausaService {
 		}
 		return res;
 	}
-	private Collection<Donation> findDonationsByCausa(Causa id) {
-		return donationRepo.findByCausa(id);
+	private Collection<Donation> findDonationsByCausa(final Causa causa) {
+		return this.donationRepo.findByCausa(causa.getId());
 	}
 	
 }

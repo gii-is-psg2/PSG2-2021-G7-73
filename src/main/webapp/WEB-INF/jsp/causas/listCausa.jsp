@@ -49,7 +49,11 @@
                 
                  <sec:authorize access="hasAuthority('owner')">
                 <td>
-                	<a class="btn btn-default" href='<spring:url value="/donations/new" htmlEscape="true"/>'>Añadir Donación</a>
+
+                	 <spring:url value="/donations/{causaId}/new" var="donationUrl">
+                        <spring:param name="causaId" value="${causa.id}"/>
+                    </spring:url>
+                    <a href="${fn:escapeXml(donationUrl)}">Añadir Donación</a>
                 </td>
                 </sec:authorize>
                 

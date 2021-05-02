@@ -1,14 +1,12 @@
 package org.springframework.samples.petclinic.web;
 
 import java.time.LocalDate;
-import java.util.Map;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Causa;
 import org.springframework.samples.petclinic.model.Donation;
-import org.springframework.samples.petclinic.model.Vet;
 import org.springframework.samples.petclinic.service.CausaService;
 import org.springframework.samples.petclinic.service.DonationService;
 import org.springframework.stereotype.Controller;
@@ -30,28 +28,30 @@ public class DonationController {
 	CausaService causaService;
 
 	@Autowired
-	public DonationController(DonationService donationService) {
+	public DonationController(final DonationService donationService) {
 		this.donationService = donationService;
 	}
 	
 	
 
-	@GetMapping(value = "/new")
-	public String initCreationForm(Causa causa, ModelMap model) {
-		Donation donation = new Donation();
+	@GetMapping(value = "/{causaId}/new")
+	public String initCreationForm(@PathVariable("causaId") final int causaId, final ModelMap model) {
+		final Donation donation = new Donation();
+		final Causa causa = this.causaService.findById(causaId);
 		causa.addDonation(donation);
 		donation.setDate(LocalDate.now());
 		model.put("donation", donation);
 		return "donations/createOrUpdateDonationForm";
 	}
 
-	@PostMapping(value = "/new")
-	public String processCreationForm(@PathVariable("causaId") final int causaId, @Valid Donation donation, BindingResult result, ModelMap model) {
-		Causa causa = causaService.findCausaById(causaId);
-		if (causaService.totalBudget(causa)==causa.getNum()){
-			result.rejectValue("client", "closed");
-			result.rejectValue("amount", "closed");
-		} 
+	@PostMapping(value = "/{causaId}/new")
+	public String processCreationForm(@PathVariable("causaId") final int causaId, @Valid final Donation donation, final BindingResult result, final ModelMap model) {
+		final Causa causa = this.causaService.findCausaById(causaId);
+//		final Double a=this.causaService.totalBudget(causaId);
+//		if (a==causa.getNum()){
+//			result.rejectValue("client", "closed");
+//			result.rejectValue("amount", "closed");
+//		} 
 		if (result.hasErrors()) {
 			model.put("donation", donation);
 			return "donations/createOrUpdateDonationForm";
