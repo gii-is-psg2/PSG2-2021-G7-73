@@ -12,17 +12,23 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class DonationService {
 	
-private final DonationRepository donationRepository ;
+	private final DonationRepository donationRepository ;
+
+	@Autowired
+	private final CausaService causaService;
 	
 	
 	@Autowired
-	public DonationService(final DonationRepository donationRepository) {
+	public DonationService(final DonationRepository donationRepository,final CausaService causaService) {
 		this.donationRepository = donationRepository;
+		this.causaService = causaService;
 	}
 
 	
 	@Transactional
-	public void saveDonation(final Donation donation)  {
+	public void saveDonation(final Donation donation, final int causaId)  {
+		final Causa causa = this.causaService.findById(causaId);
+		this.causaService.addDonation(causa, donation);
 		this.donationRepository.save(donation);
 	}
 

@@ -37,8 +37,6 @@ public class DonationController {
 	@GetMapping(value = "/{causaId}/new")
 	public String initCreationForm(@PathVariable("causaId") final int causaId, final ModelMap model) {
 		final Donation donation = new Donation();
-		final Causa causa = this.causaService.findById(causaId);
-		causa.addDonation(donation);
 		donation.setDate(LocalDate.now());
 		model.put("donation", donation);
 		return "donations/createOrUpdateDonationForm";
@@ -56,8 +54,7 @@ public class DonationController {
 			model.put("donation", donation);
 			return "donations/createOrUpdateDonationForm";
 		} else {
-			this.donationService.saveDonation(donation);
-			causa.addDonation(donation);
+			this.donationService.saveDonation(donation,	causaId);
 
 
 			return "redirect:/causas";

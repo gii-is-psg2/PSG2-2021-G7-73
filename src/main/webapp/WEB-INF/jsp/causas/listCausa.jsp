@@ -19,6 +19,7 @@
             <th>Descripción</th>
             <th>Oranización</th>
             <th>Objetivo</th>
+            <th>Alcanzado</th>
             
              <sec:authorize access="hasAuthority('owner')">
             <th>Donar</th>
@@ -45,6 +46,10 @@
                 </td>
                 <td>
                     <c:out value="${causa.num}"/>
+                </td> 
+                
+                <td>
+                    <c:out value="${causa.totalBudget}"/>
                 </td> 
                 
                  <sec:authorize access="hasAuthority('owner')">

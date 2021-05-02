@@ -86,5 +86,14 @@ public class CausaService {
 	private Collection<Donation> findDonationsByCausa(final Causa causa) {
 		return this.donationRepo.findByCausa(causa.getId());
 	}
+
+
+	public void addDonation(final Causa causa, final Donation donation) {
+		if(causa.getTotalBudget()==null) {
+			causa.setTotalBudget(donation.getAmount());
+		}else {
+			causa.setTotalBudget(causa.getTotalBudget() + donation.getAmount());
+		}
+	}
 	
 }

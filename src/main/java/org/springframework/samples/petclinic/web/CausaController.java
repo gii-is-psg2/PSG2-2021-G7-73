@@ -25,11 +25,17 @@ public class CausaController {
 	CausaService causaService;
 	
 
+	@Autowired
+	public CausaController(final CausaService causaService) {
+		this.causaService = causaService;
+	}
+	
+	
 	@GetMapping
 	public String listCausas(final ModelMap model) {
 		final String vista = "causas/listCausa";
-		final Collection<Causa> Causa = this.causaService.findAll();
-		model.addAttribute("causas", Causa);
+		final Collection<Causa> causa = this.causaService.findAll();
+		model.addAttribute("causas", causa);
 		return vista;
 	}
 
@@ -59,7 +65,9 @@ public class CausaController {
 	@GetMapping("/{causaId}")
 	public ModelAndView showCausa(@PathVariable("causaId") final int causaId) {
 		final ModelAndView mav = new ModelAndView("causas/causaDetails");
-		mav.addObject(this.causaService.findById(causaId));
+		final Collection<Causa> causas=this.causaService.findAll();
+		final Causa causa=causas.stream().filter(x->x.getId()==causaId).findFirst().get();
+		mav.addObject(causa);
 		return mav;
 	}
 
