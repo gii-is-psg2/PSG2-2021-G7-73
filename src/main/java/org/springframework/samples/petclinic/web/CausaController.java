@@ -2,7 +2,6 @@ package org.springframework.samples.petclinic.web;
 
 import java.util.Collection;
 
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,41 +25,49 @@ public class CausaController {
 	CausaService causaService;
 	
 
+	@Autowired
+	public CausaController(final CausaService causaService) {
+		this.causaService = causaService;
+	}
+	
+	
 	@GetMapping
-	public String listCausas(ModelMap model) {
-		String vista = "causas/listCausa";
-		Collection<Causa> Causa = causaService.findAll();
-		model.addAttribute("causas", Causa);
+	public String listCausas(final ModelMap model) {
+		final String vista = "causas/listCausa";
+		final Collection<Causa> causa = this.causaService.findAll();
+		model.addAttribute("causas", causa);
 		return vista;
 	}
 
 	
 	@PostMapping(path="/save")
-	public String guardarCausa(@Valid Causa causa, BindingResult result, ModelMap modelmap) {
+	public String guardarCausa(@Valid final Causa causa, final BindingResult result, final ModelMap modelmap) {
 		String vista = "causas/listCausa";
 		if(result.hasErrors()) {
 			modelmap.addAttribute("causa", causa);
 			return "causas/editCausa";
 		}else {
-			causaService.save(causa);
+			this.causaService.save(causa);
 			modelmap.addAttribute("message", "Causa guardada correctamente");
-			vista = listCausas(modelmap);
+			vista = this.listCausas(modelmap);
 		}
 		return vista;
 	}
 	
 	@GetMapping(path="/new")
-	public String crearCausa(ModelMap modelmap) {
-		String vista = "causas/editCausa";
+	public String crearCausa(final ModelMap modelmap) {
+		final String vista = "causas/editCausa";
 		modelmap.addAttribute("causa", new Causa());
 		return vista;
 	}
 	
 	
 	@GetMapping("/{causaId}")
-	public ModelAndView showCausa(@PathVariable("causaId") int causaId) {
-		ModelAndView mav = new ModelAndView("causas/causaDetails");
-		mav.addObject(this.causaService.findCausaById(causaId));
+	public ModelAndView showCausa(@PathVariable("causaId") final int causaId) {
+		final ModelAndView mav = new ModelAndView("causas/causaDetails");
+		final Collection<Causa> causas=this.causaService.findAll();
+		final Causa causa=causas.stream().filter(x->x.getId()==causaId).findFirst().get();
+		mav.addObject(causa);
 		return mav;
 	}
 

@@ -19,6 +19,7 @@
             <th>Descripción</th>
             <th>Oranización</th>
             <th>Objetivo</th>
+            <th>Alcanzado</th>
             
              <sec:authorize access="hasAuthority('owner')">
             <th>Donar</th>
@@ -47,9 +48,17 @@
                     <c:out value="${causa.num}"/>
                 </td> 
                 
+                <td>
+                    <c:out value="${causa.totalBudget}"/>
+                </td> 
+                
                  <sec:authorize access="hasAuthority('owner')">
                 <td>
-                	<a class="btn btn-default" href='<spring:url value="/donations/new" htmlEscape="true"/>'>Añadir Donación</a>
+
+                	 <spring:url value="/donations/{causaId}/new" var="donationUrl">
+                        <spring:param name="causaId" value="${causa.id}"/>
+                    </spring:url>
+                    <a href="${fn:escapeXml(donationUrl)}">Añadir Donación</a>
                 </td>
                 </sec:authorize>
                 

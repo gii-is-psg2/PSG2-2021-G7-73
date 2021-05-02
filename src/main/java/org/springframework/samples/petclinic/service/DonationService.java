@@ -1,10 +1,6 @@
 package org.springframework.samples.petclinic.service;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
-
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Causa;
@@ -16,29 +12,35 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class DonationService {
 	
-private DonationRepository donationRepository ;
+	private final DonationRepository donationRepository ;
+
+	@Autowired
+	private final CausaService causaService;
 	
 	
 	@Autowired
-	public DonationService(DonationRepository donationRepository) {
+	public DonationService(final DonationRepository donationRepository,final CausaService causaService) {
 		this.donationRepository = donationRepository;
+		this.causaService = causaService;
 	}
 
 	
 	@Transactional
-	public void saveDonation(Donation donation)  {
-		donationRepository.save(donation);
+	public void saveDonation(final Donation donation, final int causaId)  {
+		final Causa causa = this.causaService.findById(causaId);
+		this.causaService.addDonation(causa, donation);
+		this.donationRepository.save(donation);
 	}
 
 	@Transactional(readOnly=true)
-	public Donation findById(int donationId)  {
-		return donationRepository.findById(donationId);
+	public Donation findById(final int donationId)  {
+		return this.donationRepository.findById(donationId);
 	}
 	
 
 	
 	@Transactional(readOnly=true)
-	public Collection<Donation> findByCausa(Causa causa)  {
-		return donationRepository.findByCausa(causa);
+	public Collection<Donation> findByCausa(final Causa causa)  {
+		return this.donationRepository.findByCausa(causa.getId());
 	}
 }

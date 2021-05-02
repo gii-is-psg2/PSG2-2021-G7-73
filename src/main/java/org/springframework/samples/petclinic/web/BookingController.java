@@ -35,8 +35,11 @@ public class BookingController {
 		this.bookingService = bookingService;
 		this.petService = petService;
 	}
+	@InitBinder("booking")
+	public void initBookingBinder(WebDataBinder dataBinder) {
+		dataBinder.setValidator(new BookingValidator());
+	}
 	
-
 	@InitBinder
 	public void setAllowedFields(  final WebDataBinder dataBinder) {
 		dataBinder.setDisallowedFields("id");
