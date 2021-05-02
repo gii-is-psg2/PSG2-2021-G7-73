@@ -1,7 +1,6 @@
 package org.springframework.samples.petclinic.model;
 
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,11 +27,8 @@ public class Causa extends BaseEntity{
 	@Column(name = "organizacion")
 	private String organizacion;
 
-
-
-
 	@Column(name = "totalBudget")
-	private Integer totalBudget;
+	private Double totalBudget;
 
 
 	@Column(name = "num")
@@ -42,70 +38,72 @@ public class Causa extends BaseEntity{
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="causa", fetch = FetchType.EAGER)
 	private List<Donation> donations;
 
+	
 	public List<Donation> getDonations() {
-		return donations;
+		return this.donations;
 	}
 
 
-	public void listDonations(List<Donation> donations) {
+	public void listDonations(final List<Donation> donations) {
 		this.donations = donations;
 	}
 
 
 	public Double getNum() {
-		return num;
+		return this.num;
 	}
 
+	public Double getTotalBudget() {
+		return this.totalBudget;
+	}
+	
+	public void setTotalBudget(final Double budget) {
+		this.totalBudget=budget;
+	}
 
-	public void setNum(Double num) {
+	public void setNum(final Double num) {
 		this.num = num;
 	}
 
 
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public String getDescripcion() {
-		return descripcion;
+		return this.descripcion;
 	}
 
 	public String getOrganizacion() {
-		return organizacion;
+		return this.organizacion;
 	}
 
 
-	public void setNombre(String nombre) {
+	public void setNombre(final String nombre) {
 		this.nombre = nombre;
 	}
 
-	public void setDescripcion(String descripcion) {
+	public void setDescripcion(final String descripcion) {
 		this.descripcion = descripcion;
 	}
 
-	public void setOrganizacion(String organizacion) {
+	public void setOrganizacion(final String organizacion) {
 		this.organizacion = organizacion;
 	}
 
 
 
 	public List<Donation> findDonations() {
-		return donations.stream().collect(Collectors.toList());
+		return this.donations.stream().collect(Collectors.toList());
 
 	}
 
 
-	public void addDonation(Donation donation) {
-		List<Donation> hola= this.getDonations();
-		if(hola==null) {
-			List<Donation>coleccion = new ArrayList<>();
-			coleccion.add(donation);
-			this.donations=coleccion;
-		}else {
-			hola.add(donation);
-		}
-		donation.setCausa(this);
+	public void addDonation(final Donation donation) {
+		this.totalBudget=donation.getAmount();
+//		this.donations.add(donation);
+//		this.setTotalBudget(this.getTotalBudget() + donation.getAmount());
 
 
 	}
