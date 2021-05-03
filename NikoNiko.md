@@ -50,12 +50,12 @@ In the retrospective meeting, the team has a discussion about those results.
 | 23 abril      |    :smile:    |               |  :smile:       | :neutral_face: |  :smile:       |                
 | 24 abril      |       -       |               |      -         |       -        |        -       |                
 | 25 abril      |       -       |               |      -         |       -        |        -       |                
-| 26 abril      |               |               |      -         |       -        |        -       |                
-| 27 abril      |               |               | :neutral_face: |       -        |        -       |                
-| 28 abril      |               |               |        -       |       -        | :neutral_face: |                
-| 29 abril      |               |               | :neutral_face: | :neutral_face: | :smile:        |                
-| 30 abril      |               |               |  :smile:       |                |                |                
-| 1 mayo        |               |               | :neutral_face: |                |                |                
-| 2 mayo        |               |               | :neutral_face: |                |                |                
-| 3 mayo        |               |               |                |                |                |                
+| 26 abril      |       -       |               |      -         |       -        |        -       |                
+| 27 abril      |       -       |               | :neutral_face: |       -        |        -       |                
+| 28 abril      |       -       |               |        -       |       -        | :neutral_face: |                
+| 29 abril      |       -       |               | :neutral_face: | :neutral_face: | :smile:        |                
+| 30 abril      |  :smile:      |               |  :smile:       |                |                |                
+| 1 mayo        |       -       |               | :neutral_face: |                |                |                
+| 2 mayo        |    :fearful:  |               | :neutral_face: |                |                |                
+| 3 mayo        | :neutral_face:|               |                |                |                |                
 
