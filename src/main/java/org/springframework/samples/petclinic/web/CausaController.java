@@ -66,9 +66,10 @@ public class CausaController {
 	public ModelAndView showCausa(@PathVariable("causaId") final int causaId) {
 		final ModelAndView mav = new ModelAndView("causas/causaDetails");
 		final Collection<Causa> causas=this.causaService.findAll();
+		if(causas.stream().filter(x->x.getId()==causaId).findFirst().isPresent()) {
 		final Causa causa=causas.stream().filter(x->x.getId()==causaId).findFirst().get();
 		mav.addObject(causa);
+		}
 		return mav;
 	}
-
 }

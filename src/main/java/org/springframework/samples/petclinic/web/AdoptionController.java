@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class AdoptionController {
 
 
-	private static final String VIEWS_ADOPTION_CREATE_OR_UPDATE_FORM = "adoptions/createOrUpdateAdoptionForm";
 	
 	private final AdoptionService adoptionService;
 
@@ -51,42 +50,11 @@ public class AdoptionController {
 	
 //	@GetMapping(value = "/adoptions/new")
 //	public String initCreationForm(final Map<String, Object> model) {
-//		final Adoption adoption = new Adoption();
-//		model.put("adoption", adoption);
-//		return AdoptionController.VIEWS_ADOPTION_CREATE_OR_UPDATE_FORM;
-//	}
-//
-//	@PostMapping(value = "/adoptions/new")
-//	public String processCreationForm(final BindingResult result, @Valid final Adoption adoption) {
-//		if (result.hasErrors()) {
-//			return AdoptionController.VIEWS_ADOPTION_CREATE_OR_UPDATE_FORM;
-//		}
-//		else {
-//			this.adoptionService.saveAdoption(adoption);
-//			
-//			return "redirect:/adoptions";
-//		}
-//	}
+
 	
 //	@GetMapping(value = "/adoptions/{adoptionId}/edit")
 //	public String initUpdateAdoptionForm(@PathVariable("adoptionId") final int adoptionId, final Model model) {
-//		final Adoption adoption = this.adoptionService.findAdoptionById(adoptionId);
-//		model.addAttribute(adoption);
-//		return AdoptionController.VIEWS_ADOPTION_CREATE_OR_UPDATE_FORM;
-//	}
-//
-//	@PostMapping(value = "/adoptions/{adoptionId}/edit")
-//	public String processUpdateAdoptionForm(@Valid final Adoption adoption, final BindingResult result,
-//			@PathVariable("adoptionId") final int adoptionId) {
-//		if (result.hasErrors()) {
-//			return AdoptionController.VIEWS_ADOPTION_CREATE_OR_UPDATE_FORM;
-//		}
-//		else {
-//			adoption.setId(adoptionId);
-//			this.adoptionService.saveAdoption(adoption);
-//			return "redirect:/adoptions/{adoptionId}";
-//		}
-//	}
+
 
 	@GetMapping(value ="/adoptions")
 	public ModelAndView adoptionList(final Map<String, Object> model) {
