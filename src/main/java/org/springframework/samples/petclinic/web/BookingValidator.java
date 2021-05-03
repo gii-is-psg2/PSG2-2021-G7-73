@@ -10,7 +10,7 @@ import org.springframework.validation.Validator;
 
 public class BookingValidator implements Validator {
 	private static final String REQUIRED = "required";
-
+    private static final String ERROR = "error";
 	@Override
 	public void validate(Object obj, Errors errors) {
 		Booking booking = (Booking) obj;
@@ -18,17 +18,17 @@ public class BookingValidator implements Validator {
 			errors.rejectValue("fechaEntrada", REQUIRED, REQUIRED);
 		} else {
 			if (booking.getFechaEntrada().before(Date.valueOf(LocalDate.now()))) {
-				errors.rejectValue("fechaEntrada", "error",
+				errors.rejectValue("fechaEntrada", ERROR,
 						"La fecha de entrada debe ser posterior o igual al día de hoy");
 			}
 
 			if (booking.getFechaSalida().before(Date.valueOf(LocalDate.now()))) {
-				errors.rejectValue("fechaSalida", "error",
+				errors.rejectValue("fechaSalida", ERROR,
 						"La fecha de salida debe ser posterior o igual al día de hoy");
 			}
 
 			if (booking.getFechaSalida() == null || booking.getFechaSalida().before(booking.getFechaEntrada())) {
-				errors.rejectValue("fechaSalida", "error",
+				errors.rejectValue("fechaSalida", ERROR,
 						"La fecha de salida debe ser posterior o igual a la fecha de entrada");
 			}
 
