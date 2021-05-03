@@ -18,7 +18,6 @@ public class BookingService {
 //	private UserService userService;
 //	
 //	@Autowired
-//	private AuthoritiesService authoritiesService;
 
 	@Autowired
 	public BookingService(  BookingRepository bookingRepository) {
