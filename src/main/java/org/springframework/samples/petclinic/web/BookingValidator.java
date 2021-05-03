@@ -3,11 +3,8 @@ package org.springframework.samples.petclinic.web;
 import java.sql.Date;
 import java.time.LocalDate;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.samples.petclinic.model.Booking;
-import org.springframework.samples.petclinic.model.Pet;
-import org.springframework.samples.petclinic.service.BookingService;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
