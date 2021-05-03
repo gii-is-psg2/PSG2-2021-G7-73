@@ -47,15 +47,15 @@ In the retrospective meeting, the team has a discussion about those results.
 | 20 abril      |      -        |      -        |       -        | :neutral_face: |  -             |                
 | 21 abril      |      -        | :neutral_face:|  :smile:       |       -        |  -             |                
 | 22 abril      |:neutral_face: |   :worried:   |        -       | :neutral_face: |  :worried:     |                
-| 23 abril      |    :smile:    |               |  :smile:       | :neutral_face: |  :smile:       |                
-| 24 abril      |       -       |               |      -         |       -        |        -       |                
-| 25 abril      |       -       |               |      -         |       -        |        -       |                
-| 26 abril      |       -       |               |      -         |       -        |        -       |                
-| 27 abril      |       -       |               | :neutral_face: |       -        |        -       |                
-| 28 abril      |       -       |               |        -       |       -        | :neutral_face: |                
-| 29 abril      |       -       |               | :neutral_face: | :neutral_face: | :smile:        |                
-| 30 abril      |  :smile:      |               |  :smile:       |                |        -       |                
-| 1 mayo        |       -       |               | :neutral_face: |                | :smile:        |                
-| 2 mayo        |    :fearful:  |               | :neutral_face: |                | :neutral_face: |                
+| 23 abril      |    :smile:    |:neutral_face: |  :smile:       | :neutral_face: |  :smile:       |                
+| 24 abril      |       -       |        -      |      -         |       -        |        -       |                
+| 25 abril      |       -       |        -      |      -         |       -        |        -       |                
+| 26 abril      |       -       |         -     |      -         |       -        |        -       |                
+| 27 abril      |       -       |        -      | :neutral_face: |       -        |        -       |                
+| 28 abril      |       -       |        -      |        -       |       -        | :neutral_face: |                
+| 29 abril      |       -       | :neutral_face:| :neutral_face: | :neutral_face: | :smile:        |                
+| 30 abril      |  :smile:      |        -      |  :smile:       |                |        -       |                
+| 1 mayo        |       -       |    -          | :neutral_face: |                | :smile:        |                
+| 2 mayo        |    :fearful:  |   :worried:   | :neutral_face: |                | :neutral_face: |                
 | 3 mayo        | :neutral_face:|               |                |                | :smile:        |                
 
