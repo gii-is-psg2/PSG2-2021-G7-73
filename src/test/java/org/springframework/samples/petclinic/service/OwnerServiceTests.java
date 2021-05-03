@@ -97,7 +97,7 @@ class OwnerServiceTests {
 
 	@Test
 	@Transactional
-	public void shouldInsertOwner() {
+	void shouldInsertOwner() {
 		Collection<Owner> owners = this.ownerService.findOwnerByLastName("Schultz");
 		int found = owners.size();
 

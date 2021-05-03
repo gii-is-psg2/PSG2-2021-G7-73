@@ -102,8 +102,6 @@ public class Causa extends BaseEntity{
 
 	public void addDonation(final Donation donation) {
 		this.totalBudget=donation.getAmount();
-//		this.donations.add(donation);
-
 
 	}
 

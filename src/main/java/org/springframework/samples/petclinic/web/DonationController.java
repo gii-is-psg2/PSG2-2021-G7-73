@@ -45,11 +45,6 @@ public class DonationController {
 	@PostMapping(value = "/{causaId}/new")
 	public String processCreationForm(@PathVariable("causaId") final int causaId, @Valid final Donation donation, final BindingResult result, final ModelMap model) {
 		final Causa causa = this.causaService.findCausaById(causaId);
-//		final Double a=this.causaService.totalBudget(causaId);
-//		if (a==causa.getNum()){
-//			result.rejectValue("client", "closed");
-//			result.rejectValue("amount", "closed");
-//		} 
 		if (result.hasErrors()) {
 			model.put("donation", donation);
 			return "donations/createOrUpdateDonationForm";

@@ -74,24 +74,7 @@ public class BookingController {
 	
 //	@GetMapping(value = "/bookings/{bookingId}/edit")
 //	public String initUpdateBookingForm(@PathVariable("bookingId") final   int bookingId,  final Model model) {
-//		final Booking booking = this.bookingService.findBookingById(bookingId);
-//		model.addAttribute(booking);
-//		return BookingController.VIEWS_BOOKING_CREATE_OR_UPDATE_FORM;
-//	}
-//
-//	
-//	@PostMapping(value = "/bookings/{bookingId}/edit")
-//	public String processUpdateBookingForm(@Valid final Booking booking, final BindingResult result,
-//			@PathVariable("bookingId") final int bookingId) {
-//		if (result.hasErrors()) {
-//			return BookingController.VIEWS_BOOKING_CREATE_OR_UPDATE_FORM;
-//		}
-//		else {
-//			booking.setId(bookingId);
-//			this.bookingService.saveBooking(booking);
-//			return "redirect:/owners/"+booking.getPet().getOwner().getId();
-//		}
-//	}
+
 	
 	
 	@GetMapping(value="/bookings/{petId}")
