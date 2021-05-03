@@ -57,5 +57,5 @@ In the retrospective meeting, the team has a discussion about those results.
 | 30 abril      |  :smile:      |        -      |  :smile:       |                |        -       |                
 | 1 mayo        |       -       |    -          | :neutral_face: |                | :smile:        |                
 | 2 mayo        |    :fearful:  |   :worried:   | :neutral_face: |                | :neutral_face: |                
-| 3 mayo        | :neutral_face:|               |                |                | :smile:        |                
+| 3 mayo        | :neutral_face:|     :smiley:  |                |                | :smile:        |                
 
