@@ -3,6 +3,7 @@ package org.springframework.samples.petclinic.configuration;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -24,6 +25,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 @Configuration
 @EnableWebSecurity
+@SpringBootApplication
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -43,6 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/adoptions/**").hasAnyAuthority("owner","admin")		
 				.antMatchers("/causas/**").authenticated()
 				.antMatchers("/donations/**").authenticated()
+				.antMatchers("/**").permitAll()
 
 				.anyRequest().denyAll()
 				.and()
@@ -79,6 +82,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public PasswordEncoder passwordEncoder() {	    
 	    return NoOpPasswordEncoder.getInstance();
 	}
+	
+
 	
 }
 
