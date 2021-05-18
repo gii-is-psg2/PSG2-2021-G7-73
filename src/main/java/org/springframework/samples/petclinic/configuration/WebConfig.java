@@ -16,14 +16,14 @@ public class WebConfig implements WebMvcConfigurer {
 	GenericIdToEntityConverter idToEntityConverter;
 	
     @Override
-    public void addFormatters(FormatterRegistry registry) {
+    public void addFormatters(final FormatterRegistry registry) {
     	
-        registry.addConverter(idToEntityConverter);
+        registry.addConverter(this.idToEntityConverter);
     }
     
     @Override
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+    public void configureViewResolvers(final ViewResolverRegistry registry) {
+        final InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/jsp/");
         resolver.setSuffix(".jsp");
         resolver.setViewClass(JstlView.class);
