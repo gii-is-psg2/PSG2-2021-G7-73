@@ -16,17 +16,18 @@
 @spring-green:      #6db33f;
 @spring-dark-green: #5fa134;
 @spring-brown:      #34302D;
-@spring-brown2:     #804000;
+@spring-brown2:     rgb(254, 134, 82);
 @spring-grey:       #838789;
 @spring-light-grey: #f1f1f1;
 @spring-light-grey2: #d3d3d3;
 @spring-black:		#000000;
 @spring-whatever2: 	#111111;
+@spring-link: rgb(88, 88, 88);
 
 @body-bg:                           @spring-brown2;
 @text-color:                        @spring-brown;
-@link-color:                        @spring-dark-green;
-@link-hover-color:                  @spring-dark-green;
+@link-color:                        @spring-link;
+@link-hover-color:                  @spring-link;
 
 @navbar-default-link-color:         @spring-light-grey;
 @navbar-default-link-active-color:  @spring-light-grey;
@@ -84,8 +85,22 @@
     border-color: @spring-brown;
   }
 }
+#titulo{
+	text-align: center;
+}
 
+#imgxd{
+	display:block;
+	margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 40px;
+}
 
+.container {
+	width: 100%;
+	padding: 0px 50px 0px 50px;
+}
 .container .text-muted {
   margin: 20px 0;
 }
