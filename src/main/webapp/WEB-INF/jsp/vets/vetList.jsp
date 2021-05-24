@@ -15,7 +15,10 @@
 
             <th>Nombre</th>
             <th>Especialidades</th>
-            <th>Edición</th>
+            
+            <sec:authorize access="hasAuthority('admin')">
+            	<th>Edición</th>
+            </sec:authorize>
 
         </tr>
         </thead>
@@ -31,7 +34,7 @@
                     </c:forEach>
                     <c:if test="${vet.nrOfSpecialties == 0}">none</c:if>
                 </td>
-                  <sec:authorize access="hasAuthority('owner')">
+                  <sec:authorize access="hasAuthority('admin')">
                 <td>
 
                 	 <spring:url value="/vets/{vetId}/edit" var="vetUrl">
