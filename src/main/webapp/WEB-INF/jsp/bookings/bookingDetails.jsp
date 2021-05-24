@@ -8,7 +8,10 @@
 
 <petclinic:layout pageName="bookings">
 	<h2>Información de la Reserva</h2>
-
+        <c:set var="booking" value="${bookings}"/>
+	<c:if test="${empty booking}">
+		<p>La mascota no ha tenido reservas hasta la fecha.</p>
+	</c:if>
 
 
 	<c:forEach var="booking" items="${bookings}">
