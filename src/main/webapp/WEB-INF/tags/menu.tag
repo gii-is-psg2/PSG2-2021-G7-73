@@ -31,7 +31,7 @@
 				<petclinic:menuItem active="${name eq 'owners'}" url="/owners/find"
 					title="find owners">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-					<span>Buscar dueños</span>
+					<span>Buscar dueÃ±os</span>
 				</petclinic:menuItem>
 
 				<petclinic:menuItem active="${name eq 'vets'}" url="/vets"
@@ -45,14 +45,15 @@
 					<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
 					<span>Adopciones</span>
 				</petclinic:menuItem>
-						
+
 				<petclinic:menuItem active="${name eq 'causas'}" url="/causas"
 					title="trigger a RuntimeException to see how it is handled">
 					<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
 					<span>Causas</span>
 				</petclinic:menuItem>
-				
-				<petclinic:menuItem active="${name eq 'causas'}" url="/manage/health"
+
+				<petclinic:menuItem active="${name eq 'estado'}"
+					url="/manage/health"
 					title="trigger a RuntimeException to see how it is handled">
 					<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
 					<span>Estado</span>
@@ -72,38 +73,41 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<sec:authorize access="!isAuthenticated()">
-					<li><a href="<c:url value="/login" />">Iniciar Sesión</a></li>
+					<li><a href="<c:url value="/login" />">Iniciar SesiÃ³n</a></li>
 					<li><a href="<c:url value="/users/new" />">Registrarse</a></li>
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span> 
-							<strong><sec:authentication property="name" /></strong> <span
+					<li class="dropdown" id="usuario-dropdown"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown"> <span
+							class="glyphicon glyphicon-user"></span>Â  <strong><sec:authentication
+									property="name" /></strong> <span
 							class="glyphicon glyphicon-chevron-down"></span>
 					</a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu" id="usuario-dropdown-menu">
 							<li>
 								<div class="navbar-login">
 									<div class="row">
 										<div class="col-lg-4">
 											<p class="text-center">
-												<span class="glyphicon glyphicon-user icon-size"></span>
+												<span class="glyphicon glyphicon-user icon-size"
+													id="dropdown-user-icon"></span>
 											</p>
 										</div>
 										<div class="col-lg-8">
-											<p class="text-left">
+											<p class="text-left" id="dropdown-usuario-text">
 												<strong><sec:authentication property="name" /></strong>
 											</p>
 											<p class="text-left">
 												<a href="<c:url value="/logout" />"
-													class="btn btn-primary btn-block btn-sm">Cerrar Sesión</a>
+													class="btn btn-primary btn-block btn-sm" id="logout-button">Cerrar
+													SesiÃ³n</a>
 											</p>
 										</div>
 									</div>
 								</div>
 							</li>
 							<li class="divider"></li>
-<!-- 							
+							<!-- 							
                             <li> 
 								<div class="navbar-login navbar-login-session">
 									<div class="row">
