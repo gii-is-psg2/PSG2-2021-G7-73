@@ -7,7 +7,7 @@
 
 
 <petclinic:layout pageName="bookings">
-	<h2>InformaciÃ³n de la Reserva</h2>
+	<h2>Información de la Reserva</h2>
         <c:set var="booking" value="${bookings}"/>
 	<c:if test="${empty booking}">
 		<p>La mascota no ha tenido reservas hasta la fecha.</p>
@@ -26,7 +26,7 @@
 				<td><c:out value="${booking.fechaSalida}" /></td>
 			</tr>
 			<tr>
-				<th>InformaciÃ³n</th>
+				<th>Información</th>
 				<td><c:out value="${booking.info}" /></td>
 			</tr>
 			<%-- <tr>
