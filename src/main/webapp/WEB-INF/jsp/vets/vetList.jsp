@@ -3,6 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sec"	uri="http://www.springframework.org/security/tags"%>
 
 <petclinic:layout pageName="vets">
     <h2>Veterinarios</h2>
@@ -13,6 +15,7 @@
 
             <th>Nombre</th>
             <th>Especialidades</th>
+            <th>Edición</th>
 
         </tr>
         </thead>
@@ -28,7 +31,15 @@
                     </c:forEach>
                     <c:if test="${vet.nrOfSpecialties == 0}">none</c:if>
                 </td>
-                
+                  <sec:authorize access="hasAuthority('owner')">
+                <td>
+
+                	 <spring:url value="/vets/{vetId}/edit" var="vetUrl">
+                        <spring:param name="vetId" value="${vet.id}"/>
+                    </spring:url>
+                    <a href="${fn:escapeXml(vetUrl)}">Editar Veterinario</a>
+                </td>
+                </sec:authorize>
             </tr>
         </c:forEach>
         </tbody>
