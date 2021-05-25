@@ -68,8 +68,8 @@ public class OwnerService {
 	}		
 	
 	@Transactional
-	public void deleteOwner(int ownerId) {
-		ownerRepository.delete(ownerId);
+	public void deleteOwner(Owner owner) {
+		ownerRepository.delete(owner.getId());
 	}
 
 }

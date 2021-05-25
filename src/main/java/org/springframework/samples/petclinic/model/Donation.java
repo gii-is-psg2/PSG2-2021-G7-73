@@ -25,7 +25,7 @@ public class Donation extends BaseEntity{
 	private LocalDate date;
 
 	@Column(name = "amount")
-	@Min(0)
+	@Min(1)
 	private Double amount;
 
 	@Column(name="client")
